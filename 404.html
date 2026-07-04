@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>404 Not Found – Wehrmacht Jerman</title>
+        <link rel="icon" type="image/png" href="img/web_logo.png">
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+            body {
+            margin: 0;
+            padding: 0;
+            background-color: #111217;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: gridWalk 8s linear infinite;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            }
+            @keyframes gridWalk {
+                0% { background-position: 0 0; }
+                100% { background-position: 0 -30px; }
+            }
+            .header-blank, .footer-blank {
+            background-color: #20212A;
+            height: 8vh;
+            min-height: 50px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            }
+            .header-blank { justify-content: flex-end; }
+            .footer-blank { justify-content: flex-start; }
+            .pulse-line {
+                height: 4px;
+                width: 100%;
+                z-index: 10;
+                animation: linePulse 4s infinite ease-in-out;
+            }
+            @keyframes linePulse {
+                0%, 100% {
+                    background-color: #F86939;
+                    box-shadow: 0 0 4px #F86939;
+                }
+                50% {
+                    background-color: #F86939;
+                    box-shadow: 0 0 13px #F86939, 0 0 24px #F86939;
+                }
+            }
+            main {
+                flex: 1;
+                background: transparent; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;    
+                text-align: center;
+                padding: 20px;
+            }
+
+            .title-error {
+                font-size: 38vw; 
+                font-weight: 900;
+                color: #F86939;
+                letter-spacing: -0.03em;
+                line-height: 0.85;
+                margin: 0;
+            }
+            .subtitle-error {
+                font-size: 6vw;
+                font-weight: normal;
+                color: #ffffff;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                margin: 5px 0 25px 0;
+            }
+            @media (min-width: 768px) {
+                .title-error { font-size: 14rem; }
+                .subtitle-error { font-size: 2.5rem; }
+            }
+            p {
+                font-size: 1.1rem;
+                color: #ffffff;
+                max-width: 550px;
+                line-height: 1.5;
+                margin: 0 0 35px 0;
+            }
+            p strong {
+                font-weight: bold;
+                letter-spacing: 0.05em;
+            }
+            .btn-back {
+                display: inline-block;
+                background-color: #20212A;
+                color: #F86939;
+                text-decoration: none;
+                font-weight: normal;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                padding: 14px 45px;
+                border: 1px solid #F86939;
+                border-radius: 4px;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+            }
+            .btn-back:hover {
+                background-color: #F86939;
+                color: #20212A;
+                box-shadow: 0 0 15px rgba(248, 105, 57, 0.5);
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header-blank">
+            <div class="pulse-line"></div>
+        </header>
+
+        <main>
+            <h1 class="title-error">404</h1>
+            <div class="subtitle-error">Not Found</div>
+            <p><strong>HALT!</strong> Page yang Anda tuju tidak ditemukan,<br>
+            website ini sedang dalam pengembangan.</p>
+            <a href="/index.html" class="btn-back">kembali</a>
+        </main>
+        
+        <footer class="footer-blank">
+            <div class="pulse-line"></div>
+        </footer>
+    </body>
+</html>
